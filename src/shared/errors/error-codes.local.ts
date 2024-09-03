@@ -101,4 +101,81 @@ export const errorCodesLocal: IErrorCodes[] = [
       recommendations: 'Intentar mas tarde',
     },
   },
+  {
+    code: ErrorCodesEnum.TBA010,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'No se en cuentra logeado , por favor inicie sesion nuevamente',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA011,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Error no controlado en el metodo saveHistory en RestaurantDbService. posiblemente problemas con postgres',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA012,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Error no controlado en el metodo getHistoryByUser en RestaurantDbService. posiblemente problemas con postgres',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA013,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Error no controlado en el metodo => searchByCity/AuthService. revise la informacion e intente nuevamente.',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA014,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Error no controlado en el metodo => getHistoryByUser/AuthService. revise la informacion e intente nuevamente.',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA015,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Error no controlado en el metodo => findHistory/AuthController. revise la informacion e intente nuevamente.',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA016,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Error no controlado en el metodo => findByCoordinates/AuthController. revise la informacion e intente nuevamente.',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
 ];

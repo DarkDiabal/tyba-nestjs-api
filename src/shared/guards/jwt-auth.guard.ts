@@ -3,6 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 import { CustomUnauthorizedException } from '../errors/custom-exceptions';
 import serviceConfiguration from 'src/config/service-configuration';
 import { Observable } from 'rxjs';
+import { ErrorCodesEnum } from '../errors/erro-codes.enum';
 
 @Injectable()
 export class JwtAuthGuard implements CanActivate {
@@ -25,7 +26,10 @@ export class JwtAuthGuard implements CanActivate {
       request['user'] = payload;
       return true;
     } catch {
-      throw new CustomUnauthorizedException('', '');
+      throw new CustomUnauthorizedException(
+        ErrorCodesEnum.TBA010,
+        'Please log in again',
+      );
     }
   }
 
