@@ -1,6 +1,6 @@
 import './config/env/env.config';
 import { NestFactory } from '@nestjs/core';
-import { TybaServiceModule } from './app.module';
+import { TybaServiceModule } from './tyba-service.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
