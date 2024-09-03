@@ -29,5 +29,8 @@ export default () => {
       db_connection_refresh_minutes: process.env.DB_CONNECTION_REFRESH_MINUTES,
       db_ssl_enabled: process.env.DB_SSL_ENABLED,
     },
+    auth: {
+      number_hash_rounds: process.env.NUMBER_OF_HASH_ROUNDS,
+    },
   };
 };
