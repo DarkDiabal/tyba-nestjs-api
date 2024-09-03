@@ -34,5 +34,14 @@ export default () => {
       secret: process.env.JWT_SECRET,
       token_expiration: process.env.TOKEN_EXPIRATION,
     },
+    maps: {
+      url_by_query: process.env.URL_MAPS_BY_QUERY,
+      api_key: process.env.MAPS_API_KEY,
+    },
+    redis: {
+      redis_port: process.env.REDIS_PORT,
+      redis_host: process.env.REDIS_HOST,
+      redis_ttl: process.env.REDIS_TTL,
+    },
   };
 };
