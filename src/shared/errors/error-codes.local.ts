@@ -57,4 +57,48 @@ export const errorCodesLocal: IErrorCodes[] = [
       recommendations: 'Intentar mas tarde',
     },
   },
+  {
+    code: ErrorCodesEnum.TBA006,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Error no controlado en el metodo => signIn/AuthController. revise la informacion e intente nuevamente.',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA007,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'El usuario no encuentra registrado, metodo => signIn/AuthService ',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA008,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Error no controlado en el metodo => signIn/AuthService. revise la informacion e intente nuevamente.',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
+  {
+    code: ErrorCodesEnum.TBA009,
+    title: 'Presentamos Fallas',
+    icon: 'error',
+    description: 'Intente más tarde',
+    technicalDetail: {
+      description:
+        'Usuario o contraseña incorrectos, metodo => signIn/AuthService. revise la informacion e intente nuevamente.',
+      recommendations: 'Intentar mas tarde',
+    },
+  },
 ];

@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsString } from 'class-validator';
 
-export class UserDto {
+export class SignUpDto {
   @ApiProperty({
     description: 'Primer nombre',
     example: 'Pedro',
@@ -42,12 +42,34 @@ export class UserDto {
   password: string;
 }
 
+export class SignInDto {
+  @ApiProperty({
+    description: 'Correo electronico',
+    example: 'pedro.pascal@yopmail.com',
+    maxLength: 100,
+  })
+  @IsString()
+  email: string;
+
+  @ApiProperty({
+    description: 'Contrasena',
+    maxLength: 20,
+  })
+  @IsString()
+  password: string;
+}
+
 export class GeneralMesaggeResponse {
   @ApiProperty({
     description: 'Mensaje indicando que que la solicito finalizo correctamente',
     example: 'Transacción exitosa',
   })
   message: string;
+
+  @ApiProperty({
+    description: 'token generado al crear el nuevo usuario',
+  })
+  token: any;
 }
 export class GeneralDataResponse {
   @ApiProperty({

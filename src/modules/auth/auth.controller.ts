@@ -5,7 +5,7 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { GeneralDataResponse, UserDto } from './dto/user.dto';
+import { GeneralDataResponse, SignInDto, SignUpDto } from './dto/user.dto';
 import {
   INTERNAL_SERVER_ERROR,
   INVALID_PAYLOAD_ERROR,
@@ -24,7 +24,7 @@ export class AuthController {
 
   @Version('1')
   @ApiOperation({
-    summary: 'create user',
+    summary: 'sign up',
     description: 'method for create a new user',
   })
   @ApiBadRequestResponse({
@@ -34,7 +34,7 @@ export class AuthController {
     description: INTERNAL_SERVER_ERROR,
   })
   @Post('sign-up')
-  async signUp(@Body() user: UserDto): Promise<GeneralDataResponse> {
+  async signUp(@Body() user: SignUpDto): Promise<GeneralDataResponse> {
     try {
       return await this.authService.createUser(user);
     } catch (error) {
@@ -46,9 +46,26 @@ export class AuthController {
   }
 
   @Version('1')
+  @ApiOperation({
+    summary: 'sign in',
+    description: 'method for sign in with a user exist',
+  })
+  @ApiBadRequestResponse({
+    description: INVALID_PAYLOAD_ERROR,
+  })
+  @ApiInternalServerErrorResponse({
+    description: INTERNAL_SERVER_ERROR,
+  })
   @Post('sign-in')
-  async signIp(@Body() hello: string): Promise<string> {
-    return `${hello}`;
+  async signIn(@Body() user: SignInDto): Promise<GeneralDataResponse> {
+    try {
+      return this.authService.signIn(user);
+    } catch (error) {
+      if (error instanceof CustomException) {
+        throw error;
+      }
+      throw new CustomInternalServerException(ErrorCodesEnum.TBA006, error);
+    }
   }
 
   @Version('1')
