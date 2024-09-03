@@ -12,7 +12,7 @@ class BaseException extends HttpException {
   }
 }
 
-export class CustomException extends BaseException {}
+export class CustomException extends HttpException {}
 
 export class CustomBadRequestException extends HttpException {
   constructor(code: string, message: string) {
@@ -23,5 +23,11 @@ export class CustomBadRequestException extends HttpException {
 export class CustomInternalServerException extends HttpException {
   constructor(code: string, message: string) {
     super({ code, message }, HttpStatus.INTERNAL_SERVER_ERROR);
+  }
+}
+
+export class CustomUnauthorizedException extends HttpException {
+  constructor(code: string, message: string) {
+    super({ code, message }, HttpStatus.UNAUTHORIZED);
   }
 }

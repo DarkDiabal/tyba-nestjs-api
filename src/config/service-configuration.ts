@@ -31,6 +31,8 @@ export default () => {
     },
     auth: {
       number_hash_rounds: process.env.NUMBER_OF_HASH_ROUNDS,
+      secret: process.env.JWT_SECRET,
+      token_expiration: process.env.TOKEN_EXPIRATION,
     },
   };
 };

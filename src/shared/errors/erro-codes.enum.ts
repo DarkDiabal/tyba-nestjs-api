@@ -4,4 +4,8 @@ export enum ErrorCodesEnum {
   TBA003 = 'TBA003',
   TBA004 = 'TBA004',
   TBA005 = 'TBA005',
+  TBA006 = 'TBA006',
+  TBA007 = 'TBA007',
+  TBA008 = 'TBA008',
+  TBA009 = 'TBA009',
 }
